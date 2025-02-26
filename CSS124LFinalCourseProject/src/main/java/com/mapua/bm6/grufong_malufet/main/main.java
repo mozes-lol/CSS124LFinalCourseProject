@@ -1,5 +1,7 @@
 package com.mapua.bm6.grufong_malufet.main;
 
+import java.awt.Color;
+
 public class main extends javax.swing.JFrame {
 
     /* 
@@ -10,7 +12,7 @@ public class main extends javax.swing.JFrame {
         I structured the multidimentional array the same as how you'd see it
         on the seating arrangements written in the documentation and design.
     */
-    // Seats for flight code: F2
+    // Seats for flight code: F1
     String[][] F1SeatList = {
         {"vacant", "vacant"},
         {"vacant", "vacant"},
@@ -28,11 +30,24 @@ public class main extends javax.swing.JFrame {
         If a seat were to be changed from vacant to occupied, just change the
         string value from "vacant" to "occupied", and vice versa if otherwise.
         It'll automatically color code the seats the next time function
-        CheckSeatColorCode() is called.
+        CheckSeatColorCode(seatList) is called.
     */
+    public void CheckSeatColorCode(String[][] seatList) {
+        /*
+            This checks if the seat element in an array is "vacant" or "occupied"
+            fills in the appropriate color.
+        */
+        if (seatList[0][0] == "vacant")
+        {b_seat_1a.setBackground(Color.GREEN);}
+        else {b_seat_1a.setBackground(Color.red);}
+        if (seatList[0][1] == "vacant")
+        {b_seat_1b.setBackground(Color.GREEN);}
+        else {b_seat_1b.setBackground(Color.red);}
+    }
     
     public main() {
         initComponents();
+        CheckSeatColorCode(F1SeatList);
     }
     
     @SuppressWarnings("unchecked")
@@ -104,7 +119,7 @@ public class main extends javax.swing.JFrame {
 
         p_seat_1a.setLayout(new java.awt.BorderLayout());
 
-        b_seat_1a.setBackground(new java.awt.Color(153, 255, 153));
+        b_seat_1a.setBackground(new java.awt.Color(0, 204, 0));
         b_seat_1a.setText("1A");
         p_seat_1a.add(b_seat_1a, java.awt.BorderLayout.CENTER);
 
@@ -112,7 +127,7 @@ public class main extends javax.swing.JFrame {
 
         p_seat_1b.setLayout(new java.awt.BorderLayout());
 
-        b_seat_1b.setBackground(new java.awt.Color(153, 255, 153));
+        b_seat_1b.setBackground(new java.awt.Color(0, 204, 0));
         b_seat_1b.setText("1B");
         p_seat_1b.add(b_seat_1b, java.awt.BorderLayout.CENTER);
 
@@ -120,7 +135,7 @@ public class main extends javax.swing.JFrame {
 
         p_seat_2a.setLayout(new java.awt.BorderLayout());
 
-        b_seat_2a.setBackground(new java.awt.Color(153, 255, 153));
+        b_seat_2a.setBackground(new java.awt.Color(0, 204, 0));
         b_seat_2a.setText("2A");
         p_seat_2a.add(b_seat_2a, java.awt.BorderLayout.CENTER);
 
@@ -128,7 +143,7 @@ public class main extends javax.swing.JFrame {
 
         p_seat_2b.setLayout(new java.awt.BorderLayout());
 
-        b_seat_2b.setBackground(new java.awt.Color(153, 255, 153));
+        b_seat_2b.setBackground(new java.awt.Color(0, 204, 0));
         b_seat_2b.setText("2B");
         p_seat_2b.add(b_seat_2b, java.awt.BorderLayout.CENTER);
 
@@ -136,7 +151,7 @@ public class main extends javax.swing.JFrame {
 
         p_seat_3a.setLayout(new java.awt.BorderLayout());
 
-        b_seat_3a.setBackground(new java.awt.Color(153, 255, 153));
+        b_seat_3a.setBackground(new java.awt.Color(0, 204, 0));
         b_seat_3a.setText("3A");
         p_seat_3a.add(b_seat_3a, java.awt.BorderLayout.CENTER);
 
@@ -144,7 +159,7 @@ public class main extends javax.swing.JFrame {
 
         p_seat_3b.setLayout(new java.awt.BorderLayout());
 
-        b_seat_3b.setBackground(new java.awt.Color(153, 255, 153));
+        b_seat_3b.setBackground(new java.awt.Color(0, 204, 0));
         b_seat_3b.setText("3B");
         p_seat_3b.add(b_seat_3b, java.awt.BorderLayout.CENTER);
 
@@ -152,7 +167,7 @@ public class main extends javax.swing.JFrame {
 
         p_seat_4a.setLayout(new java.awt.BorderLayout());
 
-        b_seat_4a.setBackground(new java.awt.Color(153, 255, 153));
+        b_seat_4a.setBackground(new java.awt.Color(0, 204, 0));
         b_seat_4a.setText("4A");
         p_seat_4a.add(b_seat_4a, java.awt.BorderLayout.CENTER);
 
@@ -160,7 +175,7 @@ public class main extends javax.swing.JFrame {
 
         p_seat_4b.setLayout(new java.awt.BorderLayout());
 
-        b_seat_4b.setBackground(new java.awt.Color(153, 255, 153));
+        b_seat_4b.setBackground(new java.awt.Color(0, 204, 0));
         b_seat_4b.setText("4B");
         p_seat_4b.add(b_seat_4b, java.awt.BorderLayout.CENTER);
 
@@ -171,6 +186,8 @@ public class main extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
