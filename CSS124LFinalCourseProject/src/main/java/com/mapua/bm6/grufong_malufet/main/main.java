@@ -14,10 +14,10 @@ public class main extends javax.swing.JFrame {
     */
     // Seats for flight code: F1
     String[][] F1SeatList = {
+        {"o", "vacant"},
         {"vacant", "vacant"},
-        {"vacant", "vacant"},
-        {"vacant", "vacant"},
-        {"vacant", "vacant"}
+        {"vacant", "0"},
+        {"va0cant", "vacant"}
     };
     // Seats for flight code: F2
     String[][] F2SeatList = {
@@ -43,6 +43,24 @@ public class main extends javax.swing.JFrame {
         if (seatList[0][1] == "vacant")
         {b_seat_1b.setBackground(Color.GREEN);}
         else {b_seat_1b.setBackground(Color.red);}
+        if (seatList[0][0] == "vacant")
+        {b_seat_2a.setBackground(Color.GREEN);}
+        else {b_seat_2a.setBackground(Color.red);}
+        if (seatList[0][1] == "vacant")
+        {b_seat_2b.setBackground(Color.GREEN);}
+        else {b_seat_2b.setBackground(Color.red);}
+        if (seatList[0][0] == "vacant")
+        {b_seat_3a.setBackground(Color.GREEN);}
+        else {b_seat_3a.setBackground(Color.red);}
+        if (seatList[0][1] == "vacant")
+        {b_seat_3b.setBackground(Color.GREEN);}
+        else {b_seat_3b.setBackground(Color.red);}
+        if (seatList[0][0] == "vacant")
+        {b_seat_4a.setBackground(Color.GREEN);}
+        else {b_seat_4a.setBackground(Color.red);}
+        if (seatList[0][1] == "vacant")
+        {b_seat_4b.setBackground(Color.GREEN);}
+        else {b_seat_4b.setBackground(Color.red);}
     }
     
     public main() {
